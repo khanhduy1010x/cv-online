@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nguyen Khanh Duy – CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      padding: 40px 16px;
+      line-height: 1.65;
+    }
+
+    .cv {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    /* HEADER */
+    .header {
+      background: #1a2e4a;
+      color: #fff;
+      padding: 36px 44px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .header img {
+      width: 140px;
+      height: 150px;
+   
+    }
+
+    .header-info h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
+    .header-info .headline {
+      font-size: 0.9rem;
+      color: #9eb8d9;
+      margin-top: 3px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 12px;
+    }
+
+    .contacts a, .contacts span {
+      color: #c5d8ee;
+      text-decoration: none;
+      font-size: 0.82rem;
+    }
+
+    .contacts a:hover { color: #fff; text-decoration: underline; }
+
+    .contact-label { color: #7a9dc0; font-weight: 600; margin-right: 2px; }
+
+    /* BODY */
+    .body {
+      padding: 32px 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #1a2e4a;
+      border-bottom: 1.5px solid #d0d8e4;
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+    }
+
+    /* ABOUT */
+    .about p { color: #444; margin-bottom: 7px; font-size: 0.9rem; }
+
+    /* EDUCATION */
+    .edu-block { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; }
+    .edu-left h3 { font-size: 0.97rem; font-weight: 700; color: #1a2e4a; }
+    .edu-left .degree { font-size: 0.86rem; color: #555; margin-top: 2px; }
+    .edu-left .gpa { font-size: 0.84rem; color: #555; margin-top: 3px; }
+    .edu-right { text-align: right; font-size: 0.82rem; color: #777; }
+    .edu-highlights { margin-top: 10px; padding-left: 18px; }
+    .edu-highlights li { font-size: 0.86rem; color: #444; margin-bottom: 4px; }
+
+    /* SKILLS */
+    .skills-grid { display: flex; flex-direction: column; gap: 6px; }
+    .skill-row { display: flex; gap: 8px; font-size: 0.86rem; flex-wrap: wrap; }
+    .skill-label { font-weight: 600; color: #222; min-width: 150px; flex-shrink: 0; }
+    .skill-value { color: #444; }
+
+    /* PROJECTS */
+    .project-item {
+      padding: 0 0 18px 0;
+      border-bottom: 1px solid #ebebeb;
+    }
+    .project-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+    .project-header h3 { font-size: 0.97rem; font-weight: 700; }
+    .project-header h3 a { color: #1a2e4a; text-decoration: none; }
+    .project-header h3 a:hover { text-decoration: underline; }
+    .project-year { font-size: 0.82rem; color: #888; }
+
+    .project-meta { font-size: 0.83rem; color: #555; margin: 4px 0 6px; }
+    .project-meta span { margin-right: 12px; }
+
+    .project-list { padding-left: 18px; margin-bottom: 8px; }
+    .project-list li { font-size: 0.86rem; color: #444; margin-bottom: 3px; }
+
+    .project-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .project-links a {
+      font-size: 0.82rem;
+      color: #1a2e4a;
+      text-decoration: none;
+      border-bottom: 1px solid #9eb8d9;
+    }
+    .project-links a:hover { color: #0a1e36; border-bottom-color: #0a1e36; }
+
+    /* REFERENCES */
+    .ref-list { display: flex; flex-wrap: wrap; gap: 16px; }
+    .ref-list a { font-size: 0.86rem; color: #1a2e4a; text-decoration: none; border-bottom: 1px solid #9eb8d9; }
+    .ref-list a:hover { color: #0a1e36; }
+
+    @media (max-width: 600px) {
+      .header { flex-direction: column; align-items: center; text-align: center; padding: 24px 20px; }
+      .contacts { justify-content: center; }
+      .body { padding: 24px 20px; }
+      .edu-block { flex-direction: column; }
+      .edu-right { text-align: left; }
+      .skill-label { min-width: unset; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv">
+
+    <!-- HEADER -->
+    <div class="header">
+      <img src="../avatar.png" alt="Nguyen Khanh Duy" />
+      <div class="header-info">
+        <h1>Nguyen Khanh Duy</h1>
+        <div class="headline">Software Engineer</div>
+        <div class="contacts">
+          <span><span class="contact-label">Location:</span> Can Tho, Viet Nam</span>
+          <a href="tel:+84848150667"><span class="contact-label">Phone:</span> +84 848 150 667</a>
+          <a href="mailto:duynk.me@gmail.com"><span class="contact-label">Email:</span> duynk.me@gmail.com</a>
+          <a href="https://khanhduy.me/" target="_blank"><span class="contact-label">Website:</span> khanhduy.me</a>
+          <a href="https://github.com/khanhduy1010x" target="_blank"><span class="contact-label">GitHub:</span> khanhduy1010x</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+      <!-- ABOUT -->
+      <section class="about">
+        <div class="section-title">About Me</div>
+        <p>I am an application and web developer with a strong eagerness to learn, a hardworking attitude, and the ability to adapt quickly to new environments.</p>
+        <p>I have a solid foundation in web development, working with databases, and deploying real-world applications. I am always eager to gain more experience, enhance my technical skills, and pursue long-term growth in the field of information technology.</p>
+      </section>
+
+      <!-- EDUCATION -->
+      <section>
+        <div class="section-title">Education</div>
+        <div class="edu-block">
+          <div class="edu-left">
+            <h3>FPT University</h3>
+            <div class="degree">Bachelor of Software Engineering</div>
+            <div class="gpa">GPA 3.0 / 4.0</div>
+          </div>
+          <div class="edu-right">
+            <div>Can Tho, Viet Nam</div>
+            <div>2021 – 2025</div>
+          </div>
+        </div>
+        <ul class="edu-highlights">
+          <li>Awarded Outstanding Student for Summer 2025</li>
+          <li>Awarded Excellent Student for Spring 2025</li>
+          <li>Awarded a 50 million VND university grant to support a startup project on custom keyboard development</li>
+        </ul>
+      </section>
+
+      <!-- SKILLS -->
+      <section>
+        <div class="section-title">Skills</div>
+        <div class="skills-grid">
+          <div class="skill-row"><span class="skill-label">Programming Languages</span><span class="skill-value">Java, JavaScript (ES6+), TypeScript</span></div>
+          <div class="skill-row"><span class="skill-label">Languages</span><span class="skill-value">Japanese (JLPT N5, 2020)</span></div>
+          <div class="skill-row"><span class="skill-label">Frontend</span><span class="skill-value">ReactJS, React Native, HTML, CSS/SCSS, Bootstrap</span></div>
+          <div class="skill-row"><span class="skill-label">Backend</span><span class="skill-value">Node.js, Express.js, NestJS, Spring Boot, Spring MVC, Servlet, RESTful API</span></div>
+          <div class="skill-row"><span class="skill-label">Databases</span><span class="skill-value">MongoDB, MySQL, SQL Server, PostgreSQL</span></div>
+          <div class="skill-row"><span class="skill-label">Tools &amp; DevOps</span><span class="skill-value">Git, Docker, Postman, Swagger</span></div>
+          <div class="skill-row"><span class="skill-label">Security</span><span class="skill-value">JWT-based authentication and authorization</span></div>
+          <div class="skill-row"><span class="skill-label">Architecture</span><span class="skill-value">MVC, three-layered architecture, modular monolith, OOP</span></div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section>
+        <div class="section-title">Projects</div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <h3><a href="https://github.com/NhanNHHCE140059/ClothesStore" target="_blank">Fashion Store</a></h3>
+            <span class="project-year">2023</span>
+          </div>
+          <div class="project-meta">
+            <span>Team Member</span>
+            <span>Java · JSP · Servlet · SQL Server · HTML · CSS · JavaScript</span>
+          </div>
+          <ul class="project-list">
+            <li>Developed and managed the product module (listing, details, CRUD operations)</li>
+            <li>Designed and implemented the database schema for products and related entities</li>
+            <li>Wrote project documentation including system overview and database design</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/NhanNHHCE140059/ClothesStore" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <h3><a href="https://github.com/NhanNHHCE140059/OnlineReadingPlatform" target="_blank">Online Reading Platform</a></h3>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-meta">
+            <span>Team Leader</span>
+            <span>Java · Spring Boot · REST API · PostgreSQL · ReactJS</span>
+          </div>
+          <ul class="project-list">
+            <li>Designed and implemented authentication and authorization features</li>
+            <li>Built the base backend and frontend architecture</li>
+            <li>Implemented book reading functionality with access control based on membership packages</li>
+            <li>Managed subscription logic including purchasing and validating membership plans</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/khanhduy1010x/book-platform-frontEnd" target="_blank">Frontend</a>
+            <a href="https://github.com/khanhduy1010x/book-platform-backEnd" target="_blank">Backend</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <h3><a href="https://github.com/khanhduy1010x/optiverse-webapp" target="_blank">Optiverse Platform</a></h3>
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-meta">
+            <span>Team Member</span>
+            <span>ReactJS · React Native · NestJS · MongoDB · Docker</span>
+          </div>
+          <ul class="project-list">
+            <li>Designed and implemented authentication and authorization mechanisms</li>
+            <li>Built the base backend and frontend architecture for the system</li>
+            <li>Developed online meeting (video conference) module similar to Google Meet</li>
+            <li>Implemented note-taking and workspace management features</li>
+            <li>Integrated AI-based meeting summarization</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.Zenith.Optiverse&hl=vi" target="_blank">CH Play</a>
+            <a href="https://github.com/khanhduy1010x/optiverse-webapp" target="_blank">Web App</a>
+            <a href="https://github.com/khanhduy1010x/optiverse-mobile" target="_blank">Mobile</a>
+            <a href="https://github.com/khanhduy1010x/optiverse-core-service" target="_blank">Core Service</a>
+            <a href="https://github.com/khanhduy1010x/optiverse-productivity-service" target="_blank">Productivity</a>
+            <a href="https://github.com/khanhduy1010x/optiverse-notification-service" target="_blank">Notification</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- REFERENCES -->
+      <section>
+        <div class="section-title">References</div>
+        <div class="ref-list">
+          <a href="https://github.com/khanhduy1010x" target="_blank">GitHub</a>
+          <a href="https://khanhduy.me/" target="_blank">Portfolio</a>
+          <a href="https://www.facebook.com/duygapthu" target="_blank">Facebook</a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
